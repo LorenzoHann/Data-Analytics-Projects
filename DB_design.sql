@@ -146,3 +146,4 @@ and restaurant.restaurant_id = placed_order.restaurant_id
 group by restaurant.restaurant_id
 order by revenue desc
 limit(1);
+
