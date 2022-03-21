@@ -189,43 +189,6 @@ ggplot(data=dat,aes(x=Var2,y=Var1,fill=Freq))+
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
