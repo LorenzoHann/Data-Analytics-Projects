@@ -1,0 +1,890 @@
+---
+title: "Tire Wear Particles Produced by Electric Vehicles"
+author:  "Xuefan Han"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment="", warning = FALSE, message = FALSE, tidy.opts=list(width.cutoff=55), tidy = TRUE)
+```
+
+## Part 1:  Research Proposal
+
+### Executive Summary / Abstract
+
+
+Like many other technological innovations, electric vehicles have been applied to many households' automobile choices worldwide. However, little research has been done to explore the downside of EVs in terms of their comparative pollution to regular gas vehicles. This paper derives from an in-depth study of comparison between EVs and GVs' vehicle weight, driving condition, and tire compound to measure their relative tire tread loss using multi-methods of data collection. The primary purpose of the present research study aims to provide significant insight into the manufacturing of more advanced and eco-efficient EVs. This report has the following primary objectives:
+1. Document and design the experiment to collect and analyze data on the tire wear rate in electric vehicles (EV) compared to gas-fueled vehicles (GV)
+2. Set a framework for future research work on environmental pollution produced by EVs.
+This report includes the results of a statistical analysis based on simulated tire wear rate under different scenarios hypothesized in 3 main research questions: 
+      Do EVs produce more tire wear particles because of higher deterioration on tires than regular gas vehicles, consequently            generating more pollution?
+      Do EVs produce more tire wear particles under harsh driving conditions?
+      Do EVs produce different amounts of tire wear particles in terms of Soft and Stiff tire compounds?
+Resulting from the simulations, a more comprehensive design for the experiment was obtained, specifically when defining the effect size expected to be found on actual data from the samples. Based on the results from simulations, all three research questions proved a significant difference between the treatment and outcome with relatively high statistical power. Thus, our team concludes that electric vehicles release more tire wear particles than gas vehicles and recommend actions to make them more environmentally friendly. 
+
+
+
+### Statement of the Problem
+
+
+Many households have shifted their transportation choice from conventional vehicles to electric vehicles in recent years. According to the International Energy Agency statistics, "more than 10 million electric cars were on the world's roads in 2020 (IEA, 2021)". Electric cars are gradually becoming more competitive in the automotive market and valuable to their investors. As people acclaim EVs' future, issues like safety, charger compatibility, and charging station availability have also aroused concerns. There are research and news written about negative aspects of electric vehicles, and among these, one area is hardly documented—the pollution of EVs. The public often acknowledges EVs' environmentally-friendly merit—less greenhouse gas emissions and higher fuel efficiency; that is also why people are encouraged to choose them over traditional gas vehicles. However, few studies have criticized EVs for not being so "green" and had some evidence to prove they release much higher carbon dioxide during production (FT, 2021). Thus, our team would like to take these studies' findings as a guide to fill the gap of EVs' environmental unfriendly utilizing tire tread loss measurement. 
+
+### Research Questions 
+
+
+RQ1: Do EVs produce more tire wear particles because of higher deterioration on tires than regular gas vehicles, and they consequently generate more pollution?
+
+RQ2: Do EVs produce more tire wear particles under harsh driving condition?
+ 
+RQ3: Do EVs tire compounds (Soft & Stiff) produce more tire wear particles than regular gas vehicles? 
+
+
+### Importance of the Study
+
+
+Aside from greenhouse gas emissions and fuel efficiency that people usually pay attention to when it comes to automobile discharge, other omitted factors are also worth further research to compare the degree of pollution between electric cars and gas cars. Suppose we can target this issue from a different approach and angle. In that case, it could provide EV companies like Tesla with helpful insight on making their EVs more advanced and eco-efficient and offer customers comprehensive information to make decisions about their consumption choice. In this sense, it would be expected that a finding would embrace actions which could range from technical aspects such as implementation of special low resistance tires (Ejsmont et al., 2014) to new governmental regulations. 
+
+### Literature Review
+
+
+The impact of Tire Wear Particles (TWP) on the environment has been well researched.  While more than hundred toxic substances are discovered in tire leachates in high concentrations, findings across many of the studies have provided strong evidence of presence of debris containing Zinc Oxide (ZnO), which is one of the components used in the rubber manufacturing process as an activator in the vulcanization procedure (Councell et al., 2004).
+
+Passenger vehicles generate both, exhaust and non-exhaust emissions. The latter are conformed by brakes, clutches, chassis, and tires. These types of emissions are to a certain extent an important source of ambient air respirable particulate matter (Panko et al., 2012). People are well aware of the negative impact of car's exhaust.  However, air pollution from TWP, which is a kind of non-exhaust emission, is much more severe and is always underestimated thus unregulated (Evans, 2020). On top of that, it is very likely that exhaust emissions will decrease further, but exhaust emissions from tire wear will certainly increase (Hugo A.C. Denier van der Gon, 2011).
+
+In addition, Wik & Dave (2008) demonstrate that TWP are found in the environment in multiple compartments such as air, water, soils/sediments, and biota. As Wik & Dave conclude, the direct effect on the ground surface is restricted to the roads’ surroundings. However, storm drains put aquatic organisms at risk. The concentration of TWP, measured in terms of mass per volume of water, affects different species with different levels of sensitivity like it is the case of the marine macroalga Ulva lactuca (Turner & Rice, 2010). Some recent studies also suggested that those particles have been largely responsible for some air-borne illnesses (Williams et al., 2005).
+
+This negative environmental effect is evident considering the facts revealed by the aforementioned authors and their investigations. It is also noteworthy that the research field around TWP is not limited to environmental sciences, but there is extensive field work on the technical and engineering aspects related to the TWP generation as a consequence of tire friction.
+
+On the one hand, some investigations have drawn attention to the explicatory mechanics behind the generation of the TWP. The U.S. Department of Transportation (DOT) - National Highway Traffic Safety Administration’s (NHTSA) Uniform Tire Quality Grade Standards (UTQG) were created to provide consumers with useful information about tires available in the marketplace based on treadwear, traction and temperature capabilities (Consumer Information; UTQG, 2013). Within the UTQG specifications, the treadwear is one of the most important variables considered in some early research studies whose main objectives are to explain the variability of tread wear under different loads and driving conditions (Yarmus et al., 1985; Walter et al., 1985). Also, purely laboratory conducted investigations are also derived from interpretations of these standards such is the case of Kim & Lee (2018), whose main analysis is based on a TWP characterization.
+
+On the other hand, more recent studies started focusing on additional factors such as vehicle types and sizes. It is the case of Lee et al. (2020) who describe how vehicle sizes ranging from passenger cars to lightweight trucks, to buses, and finally heavyweight trucks will produce a scalable amount of microplastics derived from the TWP. They suggest TWP emission amount by using annual driving distance and emission factor of TWP’s of each type of vehicle. 
+
+So far, we have demonstrated that the amount of literature covering the TWP’s related topics is vast. However, there is not yet much written, nor investigated, in terms of how TWP and Electric vehicles (EV) relate.
+This research study will not pursue any statements or ideas that relate to what extent EVs would be or not eco-friendlier than gas-fueled cars. Instead, the effort will be focused on the fact that EVs are on average 24% heavier than equivalent internal combustion cars, as suggested by Timmers & Achten (2016), and how this characteristic may or may not produce any effect on the amount of TWP emission.
+
+
+### Research Plan
+
+
+
+#### Population of Interest
+
+
+
+The population of interest in our research would be both electric and gas-fueled vehicles being driven in a chosen city.
+We will select a city where electric cars are becoming popular and select a sample size of 20 brand new Volvo XC40 cars. Ten will be electric models, and the other ten will be fuel models.
+We chose these brand-new models to ensure that the tires, braking system, and emission system are brand-new products in the best state. We chose Volvo XC40 as the sample here because this type of car has both fuel and electric models, which can better meet the requirements and accuracy of our experiment.
+One thing to note is that according to the data provided by the manufacturer, the electric Volvo XC40 Recharge weighs about 1,000 pounds more than a gas-powered Volvo XC40.
+
+1.  2022 Volvo XC40 SUV/Curb weight
+2.  3,627 to 3,840 lbs
+3.  2022 Volvo XC40 Recharge Pure Electric/Curb weight
+4.  4,741 lbs
+
+#### Sample Selection
+
+
+We will use a stratified sampling method for this experiment since it is used when we reasonably expect the measurement of interest to vary between the different subgroups. We want to ensure representation from all the subgroups. In this case, we will first divide our sample into two subgroups: electric vehicles and gas vehicles. Then we choose 10 models from the electric vehicles group and 10 models from the gas vehicles group.
+
+#### Sample Size
+
+
+
+We choose 20 new Volvos for the feasibility of the experiment. First, we choose these brand-new models to ensure that the tires, braking system, and emission system are brand-new products in the best state. We choose the sample size as twenty vehicles will ensure the feasibility and operability of the experiment. 
+
+#### Operational Procedures
+
+
+
+electric Volvo XC40 fitting with the same soft tire and the other ten brand-new electric Volvo XC40 fitting with the same stiff tire, and similarly, we also randomly select ten brand-new gas-powered Volvo XC40 fitting with the same soft tire as we do for the electric Volvo XC40 and the other ten brand-new gas-powered Volvo XC40 fitting with the same stiff tire. At the same time, we recruit 40 drivers from our employees in the form of a survey. The survey asks employees if they would like to participate in our experiment as a driver. The content of the survey also includes what the driver needs to do specifically to help the employee decide whether he or she wants to be a driver in our experiment. 
+
+Then, we randomly select 40 employees who answer yes and assign them a brand-new electric Volvo XC40/gas-powered Volvo XC40 randomly. In our experiment, the 40 employees need to drive their assigned cars on the same 400 miles route that combines highways with city streets in random order. Before we start the experiment, we fill the car up with gas or a full charge to make sure the car starts the experiment under the same conditions. In addition, before the drivers set off, our team measures and records the weight of each car and the weight of the tires. When the cars arrive at the finish line, we measure the weight of the tires on each of the 40 cars and compare the data with the data recorded before the departure to obtain TWP(wear rate). 
+We also collect Tire speed (mi/h) and Driving Condition (Normal/Harsh) in In-vehicle monitoring systems (IVMS). After collecting all the data, we analyze the data by the electric Volvo XC40 and the gas-powered Volvo XC40 and determine whether the average TWP (Wear rate) of the electric Volvo XC40 is greater than that of the gas-powered Volvo XC40, whether different Tire Compound (Soft/Stiff) have different effects on TWP (Wear rate), and whether different Driving Condition (Normal/Harsh) will have an impact on TWP (Wear rate).
+
+### Brief Schedule
+
+
+
+![Brief Schedule](gantt_chart.png)
+
+
+#### Data Collection
+
+
+
+The concept of tire wear has been extensively approached in previous research studies utilizing simulation environments. There are empirical and theoretical models which have shown acceptable results such as Archard’s and Schallamach’s wear models (Grip, 2021). In this study, however, a more empirical-oriented approach is considered based on the measurements of the following variables in an experimental setting as described in the operational procedures of this document:
+
+·       Wear rate (mils/1000miles) [2 – 6]
+·       Car type [EV – GV]
+·       Tire speed (mi/h) [0 – 80]
+·       Distance (mi) [10 – 400]
+·       Driving condition [Normal - Harsh]
+·       Tire Compound [Soft - Stiff]
+·       Tire position [Front - Rear]
+
+The outcome variable for this experiment is represented by the “Tire tread loss” which has a magnitude of the amount of matter loss expressed in milligrams (mg) due to the wear of the tire as consequence of the friction throughout the experiment. The magnitude of the mass loss is computed by the differences in weights of each tire before and after the experiment. To compute this measurement, a high-precision weighing machine is used. Tire tread loss by weighing has less variability than by gauging because of the existence of uneven groove wear patterns between outside and inside grooves (Walter et al., 1985)
+
+The main predictor or independent variable is the “car type” to which the tires will be set for the experiment. There are two categories, electric vehicles (EV) and regular gas vehicles (GV). For the purpose of this experiment the two types of cars are equivalent in size configurations. As a reference for the size and the weight of these two types of cars, Volvo XC40 is considered in electric and gas fueled formats, with weights of 4,741 pounds (~2,150 Kg) and 3,840 pounds (~1,741 Kg) respectively according to the manufacturer’s specifications. The cars will be occupied only by the driver, and in the case of the gas fueled vehicles, the gas tanks will be filled up completely at the beginning of the experiment to assure the same weight for this specific type of car.
+
+The “distance” is a variable that is considered as part of the analysis to calculate a wear rate as a complementary way to understand the tread loss. Distance of each observation will be measured in miles (mi). The subjects will be assigned a route with a combination of city and highways roads with a length range of 10 – 400 mi.
+
+Another two variables will be recorded for each observation that pertain mainly to the impact of the lifespan and handling of the tires which are “tire/vehicle speed” and “driving condition”. Both variables will be obtained from the records of the In-vehicle monitoring systems (IVMS) that will be installed on each of the subjects of this experiment. The IVMS device keeps records of average and maximum speeds as well as sudden accelerations or harsh braking events. After each ride, the IVMS output reports categorizes the driving condition according to two different levels: normal and harsh. The speed range for the experiment will be 0 – 80 mi/h.
+
+The tires specifications will be the same for all subjects with respect to dimensional measurements. This also includes the condition of the “new tire”, and the same pressure on each one. However, two different material compounds will be randomly assigned. The tire compounds are soft or stiff.
+
+Lastly, as each of the tires will be assigned a unique identification, the position of each tire will be measured as front and rear setting.
+
+![Varaible summary](Variable_summary.png)
+
+
+
+#### Data Security
+
+
+
+Subjects involved in our research are 10 brand-new electric Volvo XC40, 10 brand-new gas-powered Volvo XC40, and employees who volunteered to drive the vehicles. The data collected concerned confidential business information of the car company. In addition, information from participants who acted as drivers was partially used to assist the study. It is critical to protect all confidential data, respect the privacy of participants, and comply with applicable protocols.
+
+There are three aspects that we take into account in regards to maintaining the confidentiality of our data. First, we limit physical and digital access to critical data such as parameters for the technical condition of the vehicle and utilize mandatory login entry on all devices. Authentication such as passwords and PIN numbers are used to identify users before they have access to data. Second, we use encryption keys set by computer algorithms to transform characters and numbers into private format. Corresponding keys are only available to authorized users. At the same time, all forms of communication are encrypted. Third, we back up data whenever we derive any insights or conduct an experiment and store them in several separate formats, so that in times of sudden outages, our systems can endure from failures.
+
+On top of that, there are three methods we use to maintain the security of the records. First, instead of placing them on shared or open drive, we secure them in private files. Second, we use software to profile user behaviors to prevent unusual activities and give access permissions according to specific authorization.Third, we track user access to ensure only the right users are accessing the right data at the right time.
+
+
+#### Outcomes (Dependent Variables)/Treatments (Independent Variables)
+
+
+
+This research paper aims to compare tire tread loss for two types of vehicles-EVs and GVs; specifically, it will dig into the effect of driving conditions(Normal/Harsh) and tire compound(Soft/Stiff) on the amount of tire wear particles produced. Based on the information provided by the article from Financial Times, “thousands of tiny particles could be released into the air as people drive (FT, 2021); the research questions that will be addressed in this paper are whether EVs will generate more pollution because of higher deterioration on tires, and how do driving conditions and tire compound impact the relationship. Under the background stated above, The dependent variable will be defined as TWP—tire wear particles, also known as tire tread loss, and the metric will be the mean value of TWP for EV and GV. Respectively, the dependent variable will be car type, driving condition, and tire compound. 
+
+
+#### Other Variables
+
+
+
+There are several other variables that are not considered as part of this experiment for simplification purposes. However, it is relevant to mention that the direct or confounding effects of these variables should be considered in another future work. The referred variables are:
+
+1. Road conditions (good - bad)
+2. Ambient temperature (cold – medium – hot)
+3. Weather conditions (wet - dry)
+4. Road surface roughness
+5. Vehicle overall status (used- bad, used-good, new)
+6. Degree of braking
+7. Other type of cars (SUV, Sports Car, Station Wagon, MiniVan, Pickup Truck, etc)
+
+### Statistical Analysis Plan  
+
+
+
+For the first research question, we use two sample t-tests to test whether there is a significant difference between the TWP of EV and the TWP of EV. The treatment is the car type, EV or GV, and the outcome is the TWP wear rate (higher wear rate means higher TWP emission). The null hypothesis is that there is no significant difference between the tire wear particles and car type (H0: μ[TWPev]-μ[TWPgv] = 0). The alternative hypothesis is that the EVs would produce more tire wear particles because of higher deterioration on tires than GVs (HA: μ[TWPev]-μ[TWPgv] > 0). The explanatory variable will be defined as TWP—tire wear particles. The μ as the metric will be the mean value of TWP for EV and GV. When the H0 is rejected, this test suggests that the EVs produce more tire wear
+particles than GVs.
+
+For the second research question: Whether EVs produce more tire wear particles under harsh driving conditions? A two-sample t-test will be conducted to examine the differences in tire wear particles under normal and harsh driving conditions. The independent variable would be the driving condition, and the outcome would be the TWP wear rate. The null hypothesis is no difference in TWP based on driving conditions. Mathmetically, H0:μ[TWPnormal]-μ[TWPharsh]=0. Correspondently, the alternative hypothesis is that there is a significant difference between the TWP and driving conditions, which EVs would produce more TWP under the harsh condition(HA:μ[TWPnormal]-μ[TWPharsh]<0. If H0 is rejected, this suggests the evidence is enough to indicate a significant association between driving conditions of electric vehicles and tire tread loss they produced. 
+
+In this scenario, we use two sample t-tests to investigate whether there is a significant difference between the TWP of EV featuring Soft tire compound and Stiff  tire compound. The treatment is the tire compound, Stiff type  or Soft type , and the outcome is the TWP wear rate (higher wear rate means higher TWP emission). The null hypothesis is that there is no significant difference between the tire wear particles and tire compound(H0: μ[TWP-Stiff]-μ[TWP-Soft] = 0).The alternative hypothesis is that there is a significant difference between the tire wear particles and tire compound(HA: μ[TWP-Stiff]-μ[TWP-Soft] > 0). The explanatory variable will be defined as TWP—tire wear particles. The μ as the metric will be the mean value of TWP for EV featuring Soft tire compound and Stiff  tire compound. When the H0 is rejected, this test suggests that the EVs produce more amounts of tire wear particles  when they feature a stiff tire compound.
+
+
+
+### Limitations and Uncertainties
+
+
+
+There are certain limitations of our study. The sample size is small and might not be representative enough. We selected a specific type and brand of vehicle to conduct the experiment and the result might not generalize to all vehicle companies. There are some other variables we did not include in the study that might affect results and interact with existing variables. For instance, tires from two EVs and regular gas vehicles might exhibit different performance and produce different quantities of tire wear particles under various road temperatures and weather conditions. In addition, though we assigned cars on the same 400 miles route that combines highways with city streets in random order, we could not ensure approximate traffic conditions and total time spent on the road, which might induce unexpected differences. As for participants who volunteer to engage in our experiment, they might not perform fairly under known surveillance and as they are aware of the purpose of study. In addition, appropriate driving protocols and requirements should be designed and assessed in advance to be compatible with the study. Training should be provided to participants and their adherence should be monitored to maintain operation consistency.
+
+In terms of answering the research questions , there is a gap between tire wear particles and pollution. Specific chemical substances should be identified and employed in calculating the exact amount of pollution. On top of that, we compare tire wear particles and thus pollution produced by electric vehicles and regular gas vehicles in a relative sense. Further research can investigate this topic in an absolute sense. To be more specific, are electric vehicles are really that environmentally-friendly  in regard to its negative impact brought by tire wear particles？
+
+
+## Part 2:  Simulated Studies
+
+**Authors (Everyone)**: 
+
+
+
+### Research Question 1:
+
+#### Scenario 1:  No Effect
+
+
+
+
+##### Simulation
+
+```{r q1_scenario1_simulation}
+## Simulation ###
+library(pwr)
+
+sd = 0.161952 #standard deviation
+size_l = cohen.ES(test = "t", size = "large"); size_l
+diff = size_l$effect.size * sd; diff #difference in means of tire wear rate
+
+d = diff/sd; d #effect size
+pwr.t2n.test(n1 = 20, n2 = 20, d = d, sig.level = 0.05, 
+             alternative = "greater")
+
+```
+
+##### Analysis
+
+For scenario 1, future trends and relevant policies prove that electric cars will gradually replace fuel cars. Since there are no significant differences in the tire wear particles emission between EV and GV, it will further verify that EVs will not bring more pollution to the environment. This is also helpful for EV manufacturers to offer customers comprehensive information about their consumption choice.
+
+
+```{r q1_scenario1_analysis}
+##### Scenario 1 (No Effect)
+n <- 40
+library(data.table)
+library(DT)
+set.seed(seed = 329)
+
+data <- data.table(Car_type = c(rep.int(x = "EV", times = n/2), rep.int(x = "GV", times = n/2)))
+
+data[Car_type == "EV", TWP := round(x = rnorm(n = .N, mean = 3.36, sd = 0.161952), digits = 1)]
+data[Car_type == "GV", TWP := round(x = rnorm(n = .N, mean = 3.36, sd = 0.161952), digits = 1)]
+data[Car_type == "EV", Driving_condition := sample(c("Normal","Harsh"), 20, replace = T)]
+data[Car_type == "GV", Driving_condition := sample(c("Normal","Harsh"), 20, replace = T)]
+data[Car_type == "EV", Tire_compound := sample(c("Soft","Stiff"), 20, replace = T)]
+data[Car_type == "GV", Tire_compound := sample(c("Soft","Stiff"), 20, replace = T)]
+
+datatable(data = data)
+
+## Testing the function
+
+analyze.experiment <- function(the.dat) {
+  require(data.table)
+  setDT(the.dat)
+  
+  the.test <- t.test(x =  the.dat[Car_type == "EV", 
+                                 TWP], y = the.dat[Car_type == "GV", TWP], alternative = "two.sided")
+  
+  the.effect <- the.test$estimate[1] - the.test$estimate[2]
+  upper.bound <- the.test$conf.int[2]
+  lower.bound <- the.test$conf.int[1]
+  
+  p <- the.test$p.value
+  
+  result <- data.table(effect = the.effect, upper_ci = upper.bound, lower_ci = lower.bound,  
+                       p = p)
+  
+  return(result)
+}
+
+
+##### Repeated Simulation for 1000 Experiments: Scenario 1 - (No Effect) 
+analyze.experiment(the.dat = data)
+
+B <- 1000
+n <- 40
+RNGversion(vstr = 3.6)
+set.seed(seed = 326)
+Experiment <- 1:B
+Car_type <- c(rep.int(x = "GV", times = n/2), rep.int(x = "EV", times = n/2))
+
+sim.dat <- as.data.table(expand.grid(Experiment = Experiment, Car_type = Car_type))
+setorderv(x = sim.dat, cols = c("Experiment", "Car_type"), order = c(1,1))
+sim.dat[Car_type == "EV", TWP := round(x = rnorm(n = .N, mean = 3.36, sd = .161952), digits = 1)]
+sim.dat[Car_type == "GV", TWP := round(x = rnorm(n = .N, mean = 3.36, sd = .161952), digits = 1)]
+dim(sim.dat)
+exp.results <- sim.dat[, analyze.experiment(the.dat = .SD), 
+                       keyby = "Experiment"]
+
+DT::datatable(data = round(x = exp.results[1:100, ], digits = 3), 
+              rownames = F)
+
+## Further analysis
+# Power (TN)
+
+pwr = exp.results[, mean(p < 0.05)]; pwr
+FN = exp.results[, mean(p >= 0.05)]; FN
+
+# Range summary of observed effects
+exp.results[, summary(effect)]
+
+# Range summary of the upper bound of the 95% confidence interval
+exp.results[, summary(upper_ci)]
+exp.results[, summary(lower_ci)]
+exp.results[, mean(p)]
+
+```
+
+
+
+#### Scenario 2:  An Expected Effect
+
+
+
+##### Simulation
+
+```{r q1_scenario2_simulation}
+## Simulation ###
+library(pwr)
+
+sd = 0.161952 #standard deviation
+size_l = cohen.ES(test = "t", size = "large"); size_l
+diff = size_l$effect.size * sd; diff #difference in means of tire wear rate
+
+d = diff/sd; d #effect size
+pwr.t2n.test(n1 = 20, n2 = 20, d = d, sig.level = 0.05, 
+             alternative = "greater")
+
+```
+
+##### Analysis
+
+For scenario 2, If EVs proved to have higher TWP emissions than GVs, it would affect EVs' reputation for reducing environmental pollution. EV manufacturers should try to investigate and solve this problem.
+```{r q1_scenario2_analysis}
+##### Scenario 2 (An Expected Effect)
+n <- 40
+library(data.table)
+library(DT)
+set.seed(seed = 329)
+
+data <- data.table(Car_type = c(rep.int(x = "EV", times = n/2), rep.int(x = "GV", times = n/2)))
+
+data[Car_type == "EV", TWP := round(x = rnorm(n = .N, mean = 3.56, sd = 0.161952), digits = 1)]
+data[Car_type == "GV", TWP := round(x = rnorm(n = .N, mean = 3.36, sd = 0.161952), digits = 1)]
+data[Car_type == "EV", Driving_condition := sample(c("Normal","Harsh"), 20, replace = T)]
+data[Car_type == "GV", Driving_condition := sample(c("Normal","Harsh"), 20, replace = T)]
+data[Car_type == "EV", Tire_compound := sample(c("Soft","Stiff"), 20, replace = T)]
+data[Car_type == "GV", Tire_compound := sample(c("Soft","Stiff"), 20, replace = T)]
+
+datatable(data = data)
+
+## Testing the function
+
+analyze.experiment <- function(the.dat) {
+  require(data.table)
+  setDT(the.dat)
+  
+  the.test <- t.test(x =  the.dat[Car_type == "EV", 
+                                  TWP], y = the.dat[Car_type == "GV", TWP], alternative = "greater")
+  
+  the.effect <- the.test$estimate[1] - the.test$estimate[2]
+  upper.bound <- the.test$conf.int[2]
+  lower.bound <- the.test$conf.int[1]
+  
+  p <- the.test$p.value
+  
+  result <- data.table(effect = the.effect, upper_ci = upper.bound, lower_ci = lower.bound,  
+                       p = p)
+  
+  return(result)
+}
+
+
+##### Repeated Simulation for 1000 Experiments: Scenario 2 - (An Expected Effect) 
+analyze.experiment(the.dat = data)
+
+B <- 1000
+n <- 40
+RNGversion(vstr = 3.6)
+set.seed(seed = 326)
+Experiment <- 1:B
+Car_type <- c(rep.int(x = "GV", times = n/2), rep.int(x = "EV", times = n/2))
+
+sim.dat <- as.data.table(expand.grid(Experiment = Experiment, Car_type = Car_type))
+setorderv(x = sim.dat, cols = c("Experiment", "Car_type"), order = c(1,1))
+sim.dat[Car_type == "EV", TWP := round(x = rnorm(n = .N, mean = 3.56, sd = .161952), digits = 1)]
+sim.dat[Car_type == "GV", TWP := round(x = rnorm(n = .N, mean = 3.36, sd = .161952), digits = 1)]
+dim(sim.dat)
+exp.results <- sim.dat[, analyze.experiment(the.dat = .SD), 
+                       keyby = "Experiment"]
+
+DT::datatable(data = round(x = exp.results[1:100, ], digits = 3), 
+              rownames = F)
+
+## Further analysis
+# Power (TN)
+
+pwr = exp.results[, mean(p < 0.05)]; pwr
+FN = exp.results[, mean(p >= 0.05)]; FN
+
+# Range summary of observed effects
+exp.results[, summary(effect)]
+
+# Range summary of the upper bound of the 95% confidence interval
+exp.results[, summary(upper_ci)]
+exp.results[, summary(lower_ci)]
+exp.results[, mean(p)]
+```
+
+
+
+### Research Question 2:
+
+#### Scenario 1:  No Effect
+
+
+
+##### Simulation
+
+```{r q2_scenario1_simulation}
+library(pwr)
+
+sd = 0.161952 #standard deviation
+size_l = cohen.ES(test = "t", size = "large"); size_l
+effect_size=0.8
+diff = size_l$effect.size * sd; diff #difference in means of tire wear rate
+d = diff/sd; d 
+pwr.t2n.test(n1 = 20, n2 = 20, d = d, sig.level = 0.05, 
+             alternative = "greater")
+```
+
+##### Analysis
+
+The simulation for the second research hypothesis in scenario 1 (“no effect” on tire wear rate based on driving conditions for EVs compared to GVs) returned a p-value (0.502) greater than the chosen significance level of 0.05. This p-value fails to reject the null hypothesis. Therefore, this simulation shows that there is no significant difference in the mean tread wear rate based on driving conditions for EVs compared to GV.
+
+With this design and sample size (Effect = 0, n = 40), the simulation suggests the experiment’s power is 0.00%.
+```{r q2_scenario1_analysis}
+##### RQ2 - Scenario 1 (No Effect)
+n <- 40
+library(data.table)
+library(DT)
+set.seed(seed = 320)
+
+twp.dat <- data.table(drive_condition = c(rep.int(x = "Harsh", times = n/2), rep.int(x = "Normal", times = n/2)))
+
+twp.dat[drive_condition == "Normal", TWP := round(x = rnorm(n = .N, mean = 3.36, sd = 0.161952), digits = 1)]
+twp.dat[drive_condition == "Harsh", TWP := round(x = rnorm(n = .N, mean = 3.36, sd = 0.161952), digits = 1)]
+twp.dat[drive_condition == "Normal", Car_type := sample(c("EV","GV"), 20, replace = T)]
+twp.dat[drive_condition == "Harsh", Car_type := sample(c("EV","GV"), 20, replace = T)]
+datatable(data = twp.dat)
+
+anova.fn <- function(formula, data) {
+  mod.lm <- lm(formula = formula, data = data)
+  mod.anova <- anova(object = mod.lm)
+  return(mod.anova)
+}
+anova.fn(formula = TWP ~ drive_condition + Car_type + drive_condition * Car_type, data = twp.dat)
+
+## Code for repetition
+analyze.experiment <- function(the.dat) {
+  require(data.table)
+  setDT(the.dat)
+  
+  the.test <- t.test(x = the.dat[drive_condition == "Normal", Car_type == "EV",
+                                 TWP], y = the.dat[drive_condition == "Harsh",Car_type == "EV", TWP], alternative = "less")
+  
+  the.effect <- the.test$estimate[1] - the.test$estimate[2]
+  lower.bound <- the.test$conf.int[1]
+  upper.bound <- the.test$conf.int[2]
+  p <- the.test$p.value
+  
+  result <- data.table(effect = the.effect, lower_ci = lower.bound, upper_ci = upper.bound, 
+                       p = p)
+  
+  return(result)
+}
+
+## Testing the function
+analyze.experiment(the.dat = twp.dat)
+
+
+##### Repeated Simulation for 1000 Experiments: RQ2 - Scenario 1 - (No Effect) 
+
+B <- 1000
+n <- 40
+RNGversion(vstr = 3.6)
+set.seed(seed = 320)
+Experiment <- 1:B
+drive_condition <- c(rep.int(x = "Normal", times = n/2), rep.int(x = "Harsh", times = n/2))
+
+sim.dat <- as.data.table(expand.grid(Experiment = Experiment, Group = drive_condition))
+setorderv(x = sim.dat, cols = c("Experiment", "Group"), order = c(1,1))
+sim.dat[Group == "Normal", TWP := round(x = rnorm(n = .N, mean = 3.36, sd = 0.161952), digits = 1)]
+sim.dat[Group == "Harsh", TWP := round(x = rnorm(n = .N, mean = 3.36, sd = 0.161952), digits = 1)]
+sim.dat[Group == "Normal", Car_type := sample(c("EV","GV"), 20000, replace = T)]
+sim.dat[Group == "Harsh", Car_type := sample(c("EV","GV"), 20000, replace = T)]
+
+dim(sim.dat)
+
+## Analyzing All of the Simulated Experiments
+exp.results <- sim.dat[, analyze.experiment(the.dat = .SD), 
+                       keyby = "Experiment"]
+
+DT::datatable(data = round(x = exp.results[1:100, ], digits = 3), 
+              rownames = F)
+
+## Further analysis
+# Power (TN)
+pwr = exp.results[, mean(p < 0.05)]; pwr ## Power - True Negatives
+FN = exp.results[, mean(p >= 0.05)]; FN ## False Negatives
+
+# Range summary of observed effects
+exp.results[, summary(effect)]
+
+# Range summary of the upper bound of the 95% confidence interval
+exp.results[, summary(upper_ci)]
+exp.results[, summary(lower_ci)]
+
+exp.results[, mean(p)]
+```
+
+
+
+#### Scenario 2:  An Expected Effect
+
+
+
+##### Simulation
+
+```{r q2_scenario2_simulation}
+library(pwr)
+
+sd = 0.161952 #standard deviation
+size_l = cohen.ES(test = "t", size = "large"); size_l
+effect_size=0.8
+diff = size_l$effect.size * sd; diff #difference in means of tire wear rate
+d = diff/sd; d 
+pwr.t2n.test(n1 = 20, n2 = 20, d = d, sig.level = 0.05, 
+             alternative = "greater")
+```
+
+##### Analysis
+
+The simulation for the second research hypothesis in scenario 2 (“an expected effect” on tire wear rate based on driving conditions for EVs compared to GVs) returned a p-value (0.036) smaller than the chosen significance level of 0.05. Therefore, we reject the null hypothesis, and the simulation shows that there is a significant difference in the mean tread wear rate based on driving conditions for EVs compared to GV.
+
+With this design and sample size (Effect = 1.64, n = 40), the simulation suggests the experiment’s power is 85.2%. This design indicates that Scenario 2 likelihood of detecting the effect is larger than Scenario 1.
+```{r q2_scenario2_analysis}
+#### RQ2 - Scenario 2 (An Expected Effect)
+n <- 40
+library(data.table)
+library(DT)
+set.seed(seed = 320)
+
+twp.dat <- data.table(drive_condition = c(rep.int(x = "Harsh", times = n/2), rep.int(x = "Normal", times = n/2)))
+
+twp.dat[drive_condition == "Normal", TWP := round(x = rnorm(n = .N, mean = 3.36, sd = 0.161952), digits = 1)]
+twp.dat[drive_condition == "Harsh", TWP := round(x = rnorm(n = .N, mean = 5, sd = 0.161952), digits = 1)]
+twp.dat[drive_condition == "Normal", Car_type := sample(c("EV","GV"), 20, replace = T)]
+twp.dat[drive_condition == "Harsh", Car_type := sample(c("EV","GV"), 20, replace = T)]
+datatable(data = twp.dat)
+
+anova.fn <- function(formula, data) {
+  mod.lm <- lm(formula = formula, data = data)
+  mod.anova <- anova(object = mod.lm)
+  return(mod.anova)
+}
+anova.fn(formula = TWP ~ drive_condition + Car_type + drive_condition * Car_type, data = twp.dat)
+
+## Code for repetition
+analyze.experiment <- function(the.dat) {
+  require(data.table)
+  setDT(the.dat)
+  
+  the.test <- t.test(x = the.dat[drive_condition == "Normal", Car_type == "EV",
+                                 TWP], y = the.dat[drive_condition == "Harsh",Car_type == "EV", TWP], alternative = "less")
+  
+  the.effect <- the.test$estimate[1] - the.test$estimate[2]
+  lower.bound <- the.test$conf.int[1]
+  upper.bound <- the.test$conf.int[2]
+  p <- the.test$p.value
+  
+  result <- data.table(effect = the.effect, lower_ci = lower.bound, upper_ci = upper.bound, 
+                       p = p)
+  
+  return(result)
+}
+
+## Testing the function
+analyze.experiment(the.dat = twp.dat)
+
+
+##### Repeated Simulation for 1000 Experiments: RQ2 - Scenario 2 - (An Expected Effect) 
+
+B <- 1000
+n <- 40
+RNGversion(vstr = 3.6)
+set.seed(seed = 320)
+Experiment <- 1:B
+drive_condition <- c(rep.int(x = "Normal", times = n/2), rep.int(x = "Harsh", times = n/2))
+
+sim.dat <- as.data.table(expand.grid(Experiment = Experiment, Group = drive_condition))
+setorderv(x = sim.dat, cols = c("Experiment", "Group"), order = c(1,1))
+sim.dat[Group == "Normal", TWP := round(x = rnorm(n = .N, mean = 3.36, sd = 0.161952), digits = 1)]
+sim.dat[Group == "Harsh", TWP := round(x = rnorm(n = .N, mean = 5, sd = 0.161952), digits = 1)]
+sim.dat[Group == "Normal", Car_type := sample(c("EV","GV"), 20000, replace = T)]
+sim.dat[Group == "Harsh", Car_type := sample(c("EV","GV"), 20000, replace = T)]
+
+dim(sim.dat)
+
+## Analyzing All of the Simulated Experiments
+exp.results <- sim.dat[, analyze.experiment(the.dat = .SD), 
+                       keyby = "Experiment"]
+
+DT::datatable(data = round(x = exp.results[1:100, ], digits = 3), 
+              rownames = F)
+
+## Further analysis
+# Power (TN)
+pwr = exp.results[, mean(p < 0.05)]; pwr ## Power - True Negatives
+FN = exp.results[, mean(p >= 0.05)]; FN ## False Negatives
+
+# Range summary of observed effects
+exp.results[, summary(effect)]
+
+# Range summary of the upper bound of the 95% confidence interval
+exp.results[, summary(upper_ci)]
+exp.results[, summary(lower_ci)]
+
+exp.results[, mean(p)]
+```
+
+### Research Question 3:
+
+#### Scenario 1:  No Effect
+
+**Authors (Xuefan 100%)**: 
+
+
+##### Simulation
+
+```{r q3_scenario1_simulation}
+
+library(pwr)
+
+sd = 0.161952 #standard deviation
+size_l = cohen.ES(test = "t", size = "large"); size_l
+effect_size=0.8
+diff = size_l$effect.size * sd; diff #difference in means of tire wear rate
+d = effect_size/sd; d 
+pwr.t2n.test(n1 = 20, n2 = 20, d = d, sig.level = 0.05, 
+             alternative = "greater")
+```
+
+##### Analysis
+
+For scenario 1, since there is no significant difference between the tire wear particles and tire compound, electric vehicles will continue to be popular on the market. As the environmentally-friendly lifestyle is the future trend, electric vehicles are likely to dominate the car market. Based on this prospect, current car manufacturers can seize the trend by producing more electric vehicles or hybrid ones instead of gas-powered vehicles in order to capture more market share before it is saturated. 
+
+```{r q3_scenario1_analysis}
+##### RQ2 - Scenario 1 (No Effect)
+n <- 40
+library(data.table)
+library(DT)
+set.seed(seed = 300)
+
+twp.dat <- data.table(Tire_compound = c(rep.int(x = "Stiff", times = n/2), rep.int(x = "Soft", times = n/2)))
+
+twp.dat[Tire_compound == "Stiff", TWP := round(x = rnorm(n = .N, mean = 3.36, sd = 0.161952), digits = 1)]
+twp.dat[Tire_compound == "Soft", TWP := round(x = rnorm(n = .N, mean = 3.36, sd = 0.161952), digits = 1)]
+twp.dat[Tire_compound == "Stiff", Car_type := sample(c("EV","GV"), 20, replace = T)]
+twp.dat[Tire_compound == "Soft", Car_type := sample(c("EV","GV"), 20, replace = T)]
+datatable(data = twp.dat)
+
+anova.fn <- function(formula, data) {
+  mod.lm <- lm(formula = formula, data = data)
+  mod.anova <- anova(object = mod.lm)
+  return(mod.anova)
+}
+anova.fn(formula = TWP ~ Tire_compound + Car_type + Tire_compound * Car_type, data = twp.dat)
+
+## Code for repetition
+analyze.experiment <- function(the.dat) {
+  require(data.table)
+  setDT(the.dat)
+  
+  the.test <- t.test(x = the.dat[Tire_compound == "Stiff", Car_type == "EV",
+                                 TWP], y = the.dat[Tire_compound == "Soft",Car_type == "EV", TWP], alternative = "less")
+  
+  the.effect <- the.test$estimate[1] - the.test$estimate[2]
+  lower.bound <- the.test$conf.int[1]
+  upper.bound <- the.test$conf.int[2]
+  p <- the.test$p.value
+  
+  result <- data.table(effect = the.effect, lower_ci = lower.bound, upper_ci = upper.bound, 
+                       p = p)
+  
+  return(result)
+}
+
+## Testing the function
+analyze.experiment(the.dat = twp.dat)
+
+
+##### Repeated Simulation for 1000 Experiments: RQ2 - Scenario 1 - (No Effect) 
+
+B <- 1000
+n <- 40
+RNGversion(vstr = 3.6)
+set.seed(seed = 300)
+Experiment <- 1:B
+Tire_compound <- c(rep.int(x = "Stiff", times = n/2), rep.int(x = "Soft", times = n/2))
+
+sim.dat <- as.data.table(expand.grid(Experiment = Experiment, Group = Tire_compound))
+setorderv(x = sim.dat, cols = c("Experiment", "Group"), order = c(1,1))
+sim.dat[Group == "Stiff", TWP := round(x = rnorm(n = .N, mean = 3.36, sd = 0.161952), digits = 1)]
+sim.dat[Group == "Soft", TWP := round(x = rnorm(n = .N, mean = 3.36, sd = 0.161952), digits = 1)]
+sim.dat[Group == "Stiff", Car_type := sample(c("EV","GV"), 20000, replace = T)]
+sim.dat[Group == "Soft", Car_type := sample(c("EV","GV"), 20000, replace = T)]
+
+dim(sim.dat)
+
+## Analyzing All of the Simulated Experiments
+exp.results <- sim.dat[, analyze.experiment(the.dat = .SD), 
+                       keyby = "Experiment"]
+
+DT::datatable(data = round(x = exp.results[1:100, ], digits = 3), 
+              rownames = F)
+
+## Further analysis
+# Power (TN)
+pwr = exp.results[, mean(p < 0.05)]; pwr ## Power - True Negatives
+FN = exp.results[, mean(p >= 0.05)]; FN ## False Negatives
+
+# Range summary of observed effects
+exp.results[, summary(effect)]
+
+# Range summary of the upper bound of the 95% confidence interval
+exp.results[, summary(upper_ci)]
+exp.results[, summary(lower_ci)]
+
+exp.results[, mean(p)]
+
+```
+
+
+
+#### Scenario 2:  An Expected Effect
+
+
+##### Simulation
+
+```{r q3_scenario2_simulation}
+
+library(pwr)
+
+sd = 0.161952 #standard deviation
+size_l = cohen.ES(test = "t", size = "large"); size_l
+effect_size=0.8
+diff = size_l$effect.size * sd; diff #difference in means of tire wear rate
+d = effect_size/sd; d 
+pwr.t2n.test(n1 = 20, n2 = 20, d = d, sig.level = 0.05, 
+             alternative = "greater")
+```
+
+##### Analysis
+
+For scenario 2, since there is a significant difference between the tire wear particles and tire compound, electric vehicles might no longer be regarded as environmentally friendly as they have been advertised. Manufacturers should consider testing various tire compounds in order to find out the optimal material.
+```{r q3_scenario2_analysis}
+n <- 40
+library(data.table)
+library(DT)
+set.seed(seed = 320)
+
+twp.dat <- data.table(Tire_compound = c(rep.int(x = "Stiff", times = n/2), rep.int(x = "Soft", times = n/2)))
+
+twp.dat[Tire_compound == "Stiff", TWP := round(x = rnorm(n = .N, mean = 5.5 , sd = 0.161952), digits = 1)]
+twp.dat[Tire_compound == "Soft", TWP := round(x = rnorm(n = .N, mean = 3.36, sd = 0.161952), digits = 1)]
+twp.dat[Tire_compound == "Stiff", Car_type := sample(c("EV","GV"), 20, replace = T)]
+twp.dat[Tire_compound == "Soft", Car_type := sample(c("EV","GV"), 20, replace = T)]
+datatable(data = twp.dat)
+
+anova.fn <- function(formula, data) {
+  mod.lm <- lm(formula = formula, data = data)
+  mod.anova <- anova(object = mod.lm)
+  return(mod.anova)
+}
+anova.fn(formula = TWP ~ Tire_compound + Car_type + Tire_compound * Car_type, data = twp.dat)
+
+## Code for repetition
+analyze.experiment <- function(the.dat) {
+  require(data.table)
+  setDT(the.dat)
+  
+  the.test <- t.test(x = the.dat[Tire_compound == "Stiff", Car_type == "EV",
+                                 TWP], y = the.dat[Tire_compound == "Soft",Car_type == "EV", TWP], alternative = "less")
+  
+  the.effect <- the.test$estimate[1] - the.test$estimate[2]
+  lower.bound <- the.test$conf.int[1]
+  upper.bound <- the.test$conf.int[2]
+  p <- the.test$p.value
+  
+  result <- data.table(effect = the.effect, lower_ci = lower.bound, upper_ci = upper.bound, 
+                       p = p)
+  
+  return(result)
+}
+
+## Testing the function
+analyze.experiment(the.dat = twp.dat)
+
+
+##### Repeated Simulation for 1000 Experiments: RQ2 - Scenario 1 - (No Effect) 
+
+B <- 1000
+n <- 40
+RNGversion(vstr = 3.6)
+set.seed(seed = 320)
+Experiment <- 1:B
+Tire_compound <- c(rep.int(x = "Stiff", times = n/2), rep.int(x = "Soft", times = n/2))
+
+sim.dat <- as.data.table(expand.grid(Experiment = Experiment, Group = Tire_compound))
+setorderv(x = sim.dat, cols = c("Experiment", "Group"), order = c(1,1))
+sim.dat[Group == "Stiff", TWP := round(x = rnorm(n = .N, mean = 5.5, sd = 0.161952), digits = 1)]
+sim.dat[Group == "Soft", TWP := round(x = rnorm(n = .N, mean = 3.36, sd = 0.161952), digits = 1)]
+sim.dat[Group == "Stiff", Car_type := sample(c("EV","GV"), 20000, replace = T)]
+sim.dat[Group == "Soft", Car_type := sample(c("EV","GV"), 20000, replace = T)]
+
+dim(sim.dat)
+
+## Analyzing All of the Simulated Experiments
+exp.results <- sim.dat[, analyze.experiment(the.dat = .SD), 
+                       keyby = "Experiment"]
+
+DT::datatable(data = round(x = exp.results[1:100, ], digits = 3), 
+              rownames = F)
+
+## Further analysis
+# Power (TN)
+pwr = exp.results[, mean(p < 0.05)]; pwr ## Power - True Negatives
+FN = exp.results[, mean(p >= 0.05)]; FN ## False Negatives
+
+# Range summary of observed effects
+exp.results[, summary(effect)]
+
+# Range summary of the upper bound of the 95% confidence interval
+exp.results[, summary(upper_ci)]
+exp.results[, summary(lower_ci)]
+
+exp.results[, mean(p)]
+
+```
+
+
+![simulation table](Stimulation.png)
+
+
+## References
+
+
+Consumer Information; Uniform Tire Quality Grading Standards (2013). https://www.federalregister.gov/documents/2013/11/06/2013-26581/consumer-information-uniform-tire-quality-grading-standards
+
+Councell, T. B., Duckenfield, K. U., Landa, E. R., & Callender, E. (2004). Tire-Wear Particles as a Source of Zinc to the Environment. Environmental Science & Technology, 38(15), 4206–4214. https://doi.org/10.1021/es034631f
+
+Ejsmont, J., Świeczko-Żurek, B., Taryma, S. (2014). Low Noise Tires For Hybrid and Electric Vehicles. The 21st International Congress on Sound and Vibration. https://leo.mech.pg.gda.pl/sites/leo.mech.pg.gda.pl/files/ICSV21%20Low%20noise%20tires%20for%20hybrid%20and%20electric%20vehicles.pdf
+
+Evans, R. (2020). Pollution from tire wear 1,000 times worse than exhaust emissions. Tire Technology International. Retrieved October 17, 2021, from https://www.tiretechnologyinternational.com/news/regulations/pollution-from-tire-wear-1000-times-worse-than-exhaust-emissions.html.
+
+Grip, M. (n.d.). Tyre Performance Estimation during Normal Driving. Retrieved December 2, 2021, from https://liu.diva-portal.org/smash/get/diva2:1566863/FULLTEXT01.pdf 
+
+How green is your electric vehicle? (2021, October 5). Financial Times. https://ig.ft.com/electric-car/
+
+Hugo A.C. Denier van der Gon. (2011, September 1). The policy relevance of wear emissions from road transport, now and in the future-an international workshop report and consensus statement. Taylor & Francis. Retrieved October 17, 2021, from https://www.tandfonline.com/doi/full/10.1080/10962247.2012.741055.
+
+Kim, G., & Lee, S. (2018). Characteristics of Tire Wear Particles Generated by a Tire Simulator under Various Driving Conditions. Environmental Science & Technology, 52(21), 12153–12161. https://doi.org/10.1021/acs.est.8b03459
+
+Lee, H., Ju, M., & Kim, Y. (2020). Estimation of emission of tire wear particles (TWPs) in Korea. Waste Management, 108, 154–159. https://doi.org/10.1016/j.wasman.2020.04.037
+
+Panko, J. M., Chu, J., Kreider, M. L., & Unice, K. M. (2013). Measurement of airborne concentrations of tire and road wear particles in urban and rural areas of France, Japan, and the United States. Atmospheric Environment, 72, 192–199. https://doi.org/10.1016/j.atmosenv.2013.01.040
+
+Timmers, V. R. J. H., & Achten, P. A. J. (2016). Non-exhaust PM emissions from electric vehicles. Atmospheric Environment, 134, 10–17. https://doi.org/10.1016/j.atmosenv.2016.03.017
+
+Trends and developments in electric vehicle markets – Global EV Outlook 2021 Analysis.(2021). IEA.  https://www.iea.org/reports/global-ev-outlook-2021/trends-and-developments-in-electric-vehicle-markets
+
+Turner, A., & Rice, L. (2010). Toxicity of tire wear particle leachate to the marine macroalga, Ulva lactuca. Environmental Pollution, 158(12), 3650–3654. https://doi.org/10.1016/j.envpol.2010.08.001
+
+U.S. Department of Transportation. https://www.transportation.gov/
+
+Walter, R., Mengert, P. & Salvatore, S. (1985). An analysis of tire tread wear groove patterns and the effect of heteroscedasticity on tire tread wear statistics. Groove wear, Statistical analysis, UTQG Test. DOT-TSC-NHTSA-85-3; DOT-HS-806-813. https://rosap.ntl.bts.gov/view/dot/5836
+
+Wik, A., & Dave, G. (2009). Occurrence and effects of tire wear particles in the environment – A critical review and an initial risk assessment. Environmental Pollution, 157(1), 1–11. https://doi.org/10.1016/j.envpol.2008.09.028
+
+Williams, P. B., Buhr, M. P., Weber, R. W., Volz, M. A., Koepke, J. W., & Selner, J. C. (2005, October 17). Latex allergen in respirable particulate air pollution. Journal of Allergy and Clinical Immunology. Retrieved October 17, 2021, from https://www.sciencedirect.com/science/article/pii/S0091674995701567.
+
+Yarmus, J., Walter R. & Mengert, P. (1985). Statistical analysis of tire treadwear data. Regression analysis, Statistical analysis, Tire treads. DOT-TSC-NHTSA-85-2; DOT-HS-806-743. https://rosap.ntl.bts.gov/view/dot/5843  
